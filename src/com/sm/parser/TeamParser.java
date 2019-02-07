@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.jsoup.nodes.Document;
 
-import com.sm.model.Player;
+import com.sm.model.SMPlayer;
 
 public interface TeamParser {
 
-	public List<Player> getPlayers(Document doc);
+	public List<SMPlayer> getPlayers(Document doc);
 }

@@ -3,9 +3,7 @@ package com.sm.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-import com.sm.model.Player.PointsConverter;
-
-public class Player implements Serializable {
+public class SignedPlayer implements SMPlayer, Serializable {
 
 	private String name;
 	private String team;
@@ -25,95 +23,102 @@ public class Player implements Serializable {
 	
 	private PointsConverter pointsConverter;
 	
-	public Player() {
+	public SignedPlayer() {
 		this.pointsConverter = new PointsConverter();
 	}
 	
-	
+	@Override
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+	@Override
 	public String getTeam() {
 		return team;
 	}
-
-
 	public void setTeam(String team) {
 		this.team = team;
 	}
-
-
+	@Override
 	public String getPoints() {
 		return points;
 	}
 	public void setPoints(String points) {
 		this.points = points;
 	}
+	@Override
 	public String getPrice() {
 		return price;
 	}
 	public void setPrice(String price) {
 		this.price = price;
 	}
+	@Override
 	public String getImageUrl() {
 		return imageUrl;
 	}
 	public void setImageUrl(String url) {
 		this.imageUrl = url;
 	}
+	@Override
 	public boolean isNational() {
 		return national;
 	}
 	public void setNational(boolean national) {
 		this.national = national;
 	}
+	@Override
 	public boolean isExtracommunity() {
 		return extracommunity;
 	}
 	public void setExtracommunity(boolean extracommunity) {
 		this.extracommunity = extracommunity;
 	}
+	@Override
 	public boolean isInjured() {
 		return injured;
 	}
 	public void setInjured(boolean injured) {
 		this.injured = injured;
 	}
+	@Override
 	public boolean isDoubtful() {
 		return doubtful;
 	}
 	public void setDoubtful(boolean doubtful) {
 		this.doubtful = doubtful;
 	}
+	@Override
 	public String getBuyUrl() {
 		return buyUrl;
 	}
 	public void setBuyUrl(String buyUrl) {
 		this.buyUrl = buyUrl;
 	}
+	@Override
 	public String getSellUrl() {
 		return sellUrl;
 	}
 	public void setSellUrl(String sellUrl) {
 		this.sellUrl = sellUrl;
 	}
+	@Override
 	public String getCancelUrl() {
 		return cancelUrl;
 	}
 	public void setCancelUrl(String cancelUrl) {
 		this.cancelUrl = cancelUrl;
 	}
+	@Override
 	public String getReplaceUrl() {
 		return replaceUrl;
 	}
 	public void setReplaceUrl(String replaceUrl) {
 		this.replaceUrl = replaceUrl;
 	}
-	
+	@Override
 	public BigDecimal getPointsAsNumber() {
 		return pointsConverter.convert(points);
 	}

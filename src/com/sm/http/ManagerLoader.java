@@ -8,6 +8,7 @@ import org.jsoup.Connection.Method;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import com.sm.http.UrlNames;
 import com.sm.model.Manager;
 import com.sm.model.Team;
 import com.sm.parser.ManagerParser;

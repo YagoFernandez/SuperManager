@@ -9,19 +9,19 @@ public class Team implements Serializable {
 
 	private String name, teamUrl;
 	private int id;
-	private List<Player> players;
+	private List<SMPlayer> players;
 	
-	public List<Player> getPlayers() {
+	public List<SMPlayer> getPlayers() {
 		return players;
 	}
-	public void setPlayers(List<Player> players) {
+	public void setPlayers(List<SMPlayer> players) {
 		this.players = players;
 	}
 	public BigDecimal getPoints() {
 		
 		BigDecimal points = BigDecimal.ZERO;
 		
-		for (Player player : players) {
+		for (SMPlayer player : players) {
 			points = points.add(player.getPointsAsNumber());
 		}
 		
